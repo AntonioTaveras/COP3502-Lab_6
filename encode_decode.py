@@ -6,8 +6,16 @@ def encode(password):
         encoded += str(new_num)
     return encoded
 
-def decode():
-    pass
+def decode(encoded):
+#Conrad Evans, Lab 6 - Group 50
+    decode = list(encoded)
+    decoded_password = ''
+    for i in range(len(decode)):
+        decode[i] = int(decode[i]) - 3
+    for j in range(len(decode)):
+        decoded_password += str(decode[j])
+    return decoded_password
+
 
 def menu():
     print("""Menu
